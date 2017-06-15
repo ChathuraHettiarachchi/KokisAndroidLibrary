@@ -93,51 +93,51 @@ public final class Kokis {
     //endregion
 
     //region set data to sharedpreferences
-    public static void setKokisInt(String key, int value) {
+    public static void putInt(String key, int value) {
         final SharedPreferences.Editor editor = getSharedPreferencesObject().edit();
         editor.putInt(key,value);
         editor.commit();
     }
 
-    public static void setKokisLong(String key, long value) {
+    public static void putLong(String key, long value) {
         final SharedPreferences.Editor editor = getSharedPreferencesObject().edit();
         editor.putLong(key, value);
         editor.commit();
     }
 
-    public static void setKokisFloat(String key, float value) {
+    public static void putFloat(String key, float value) {
         final SharedPreferences.Editor editor = getSharedPreferencesObject().edit();
         editor.putFloat(key, value);
         editor.commit();
     }
 
-    public static void setKokisBoolean(String key, boolean value) {
+    public static void putBoolean(String key, boolean value) {
         final SharedPreferences.Editor editor = getSharedPreferencesObject().edit();
         editor.putBoolean(key, value);
         editor.commit();
     }
 
-    public static void setKokisString(String key, String value) {
+    public static void putString(String key, String value) {
         final SharedPreferences.Editor editor = getSharedPreferencesObject().edit();
         editor.putString(key, value);
         editor.commit();
     }
 
-    public static  void setKokisByteArray(String key,byte[] value){
+    public static  void putByteArray(String key,byte[] value){
         String convertedByteString = convertByteArrayToString(value);
         final SharedPreferences.Editor editor = getSharedPreferencesObject().edit();
         editor.putString(key, convertedByteString);
         editor.commit();
     }
 
-    public static void setKokisDouble(String key,double value){
+    public static void putDouble(String key,double value){
         String converteddoubleString = convertDoubleToString(value);
         final SharedPreferences.Editor editor = getSharedPreferencesObject().edit();
         editor.putString(key, converteddoubleString);
         editor.commit();
     }
 
-    public static void setKokisShort(String key, short value){
+    public static void putShort(String key, short value){
         String convertedShortString = convertShortToString(value);
         final SharedPreferences.Editor editor = getSharedPreferencesObject().edit();
         editor.putString(key, convertedShortString);
@@ -146,50 +146,50 @@ public final class Kokis {
     //endregion
 
     //region get data from sharedpreferences
-    public static int getKokisInt(String key, int defaultValue) {
+    public static int getInt(String key, int defaultValue) {
         return getSharedPreferencesObject().getInt(key, defaultValue);
     }
 
-    public static long getKokisLong(String key, long defaultValue) {
+    public static long getLong(String key, long defaultValue) {
         return getSharedPreferencesObject().getLong(key, defaultValue);
     }
 
-    public static float getKokisFloat(String key, float defaultValue) {
+    public static float getFloat(String key, float defaultValue) {
         return getSharedPreferencesObject().getFloat(key, defaultValue);
     }
 
-    public static boolean getKokisBoolean(String key, boolean defaultValue) {
+    public static boolean getBoolean(String key, boolean defaultValue) {
         return getSharedPreferencesObject().getBoolean(key, defaultValue);
     }
 
-    public static String getKokisString(String key, String defaultValue) {
+    public static String getString(String key, String defaultValue) {
         return getSharedPreferencesObject().getString(key, defaultValue);
     }
 
-    public static byte[] getKokisByteArray(String key,String defaultValue){
+    public static byte[] getByteArray(String key,String defaultValue){
         String stringData = getSharedPreferencesObject().getString(key, defaultValue);
         return conertStringToByteArray(stringData);
     }
 
-    public static double getKokisDouble(String key,String defaultValue){
+    public static double getDouble(String key,String defaultValue){
         String stringData =  getSharedPreferencesObject().getString(key, defaultValue);
         return convertStringToDouble(stringData);
     }
 
-    public static short getKokisShort(String key, String defaultValue){
+    public static short getShort(String key, String defaultValue){
         String stringData =  getSharedPreferencesObject().getString(key, defaultValue);
         return convertStringToShort(stringData);
     }
     //endregion
 
     //region clear data from sharedpreferences
-    public static void deleteKokisKey(String key) {
+    public static void deleteValue(String key) {
         final SharedPreferences.Editor editor = getSharedPreferencesObject().edit();
         editor.remove(key);
         editor.commit();
     }
 
-    public static void clearAllKokisData() {
+    public static void clearAll() {
         final SharedPreferences.Editor editor = getSharedPreferencesObject().edit();
         editor.clear();
         editor.commit();
